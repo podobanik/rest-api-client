@@ -21,6 +21,22 @@ namespace RestApiClient.Controllers
             return View(db.Set<News>());
         }
 
+        [HttpGet]
+        [Authorize(Roles = "Administrator")]
+        public ActionResult Delete(int id)
+        {
+            var db = new GosuslugiContext();
+            var news = db.News.FirstOrDefault(x => x.Id == id);
+
+            if (news == null)
+                return RedirectPermanent("/News/Index");
+
+            db.News.Remove(news);
+            db.SaveChanges();
+
+            return RedirectPermanent("/News/Index");
+
+        }
 
         [HttpGet]
         [Authorize(Roles = "Administrator")]
