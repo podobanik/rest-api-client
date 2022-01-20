@@ -28,6 +28,7 @@ namespace RestApiClient.Models
         public DbSet<AvailableDocument> AvailableDocuments { get; set; }
         public DbSet<Setting> Settings { get; set; }
         public DbSet<LogHistory> LogHistories { get; set; }
+        public DbSet<Info> Infos { get; set; }
 
         public DbSet<News> News { get; set; }
         public DbSet<ArticlesEvents> ArticlesEvents { get; set; }

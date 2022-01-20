@@ -227,6 +227,7 @@
     <Compile Include="Controllers\CitizenshipsController.cs" />
     <Compile Include="Controllers\ClientsController.cs" />
     <Compile Include="Controllers\ClientTypesController.cs" />
+    <Compile Include="Controllers\ImportInfoController.cs" />
     <Compile Include="Controllers\ImportOrdersController.cs" />
     <Compile Include="Controllers\ImportXmlClientsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -253,6 +254,10 @@
     <Compile Include="Migrations\202201171313217_Final.Designer.cs">
       <DependentUpon>202201171313217_Final.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202201200059548_Final2.cs" />
+    <Compile Include="Migrations\202201200059548_Final2.Designer.cs">
+      <DependentUpon>202201200059548_Final2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Entities\ArticlesEvents.cs" />
@@ -261,6 +266,7 @@
     <Compile Include="Models\Entities\Client.cs" />
     <Compile Include="Models\Entities\ClientType.cs" />
     <Compile Include="Models\Entities\Document.cs" />
+    <Compile Include="Models\Entities\Info.cs" />
     <Compile Include="Models\Entities\LogHistory.cs" />
     <Compile Include="Models\Entities\News.cs" />
     <Compile Include="Models\Entities\Order.cs" />
@@ -434,6 +440,8 @@
     <Content Include="Views\News\Index.cshtml" />
     <Content Include="Views\Shared\GridCellDelete.cshtml" />
     <Content Include="Views\Shared\ImportLog.cshtml" />
+    <Content Include="Views\ImportInfo\Index.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\ListString.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -465,6 +473,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202201171313217_Final.resx">
       <DependentUpon>202201171313217_Final.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201200059548_Final2.resx">
+      <DependentUpon>202201200059548_Final2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
